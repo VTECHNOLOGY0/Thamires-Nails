@@ -1,0 +1,229 @@
+.container{
+    max-width: 1440px;
+    margin: 0px auto;
+    padding: 0 8px;
+    overflow: hidden;
+}
+
+//BG HOME -------
+
+.bg-home{
+    position: relative;
+}
+
+.bg-home:before{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url("/assets/bghome.jpg");
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    opacity: 0.9;    
+
+}
+
+.hero{
+    color: $roxo-light;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+
+    h1{
+        text-align: center;
+        line-height: 150%;
+        max-width: 940px;
+        font-size: 40px;
+    }
+
+    p{
+        text-align: center;
+        padding: 14px 0;
+    }
+
+    
+}
+
+.botao-contato{
+    padding: 14px 28px;
+    color: $branco-dark;
+    background-color: $orchid;
+    border: 0;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 14px auto;
+}
+
+.botao-contato:hover{
+    animation: scaleButton 0.8s infinite alternate;
+}
+
+@keyframes scaleButton {
+    from{
+        transform: scale(1)
+    }
+    to{
+        transform: scale(1.09)
+    }
+}
+
+@media screen and (max-width: 768px){
+    .hero{
+        min-height: 35vh;
+
+        h1{
+            font-size: 34px;
+            padding: 0 14px;
+            width: 100%;
+        }
+
+        p{
+            font-size: 14px;
+        }
+
+        a{
+            font-size: 20px;
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 450px){
+    .hero h1{
+        font-size: 24px;
+    }
+
+    .img img{
+        max-width: 130px;
+    }
+
+    
+}
+
+.titulo-servicos{
+    margin-top: 20px;
+    font-size: 34px;
+    text-align: center;
+    color: $orchid;
+}
+
+.servicos{
+    background-color: $branco-light;
+    color: $roxo-dark;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 5px;
+
+    img{
+        max-width: 250px;
+        max-height: 250px;
+        border-radius: 50%;
+    }
+}
+
+.servico{
+
+    margin-bottom: 60px;
+
+    h1{
+        text-align: center;
+        margin-top: 60px;
+        font-size: 26px;
+        
+    }
+
+    img{
+        margin-top: 50px;
+    }
+    
+}
+
+.img{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.precos{
+    h1{
+        text-align: center;
+        font-size: 26px;
+        color: $orchid;
+    }
+    p{
+        margin-top: 20px;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 40px;
+        text-align: center;
+    }
+    span{
+        font-weight: normal;
+    }
+}
+
+.btn-wpp {
+    position: fixed;
+    bottom: 14px;
+    right: 24px;
+    z-index: 99;
+
+    .btn-wpp img{
+        max-width: 74px;
+        transition: transform 0.4s;
+
+    }
+
+    img:hover{
+        transform: scale(1.1)
+    }
+}
+
+.btn-wpp .msg-btnWpp{
+    visibility: hidden;
+    position: absolute;
+    width: 130px;
+    top: 14px;
+    left: -144px;
+    padding: 6px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: $branco-dark;
+    color: $orchid;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.btn-wpp:hover .msg-btnWpp{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+.img-footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img{
+        max-width: 380px;
+        
+    }
+}
+
